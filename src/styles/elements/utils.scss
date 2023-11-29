@@ -1,0 +1,63 @@
+@import '../config';
+
+.status-icon {
+    &--failed {
+        color: $work-failed-color;
+    }
+
+    &--success {
+        color: $work-success-color;
+    }
+
+    &--waiting {
+        color: $work-waiting-color;
+    }
+
+    &--cancelled {
+        color: $work-cancelled-color;
+    }
+
+    &--running {
+        color: $work-running-color;
+    }
+
+    &--pending {
+        color: $work-status-warning-color;
+    }
+
+    &--init {
+        color: $work-init-color;
+    }
+
+    &--spin {
+        animation-name: spin;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    &--slow-spin {
+        animation-name: spin;
+        animation-duration: 10000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+}
+
+.icon {
+    font-size: 2em;
+}
+
+.muted {
+    color: $work-color-gray-5;
+}
+
+.title {
+    color: $work-color-gray-7;
+    font-size: 1.1em;
+}
